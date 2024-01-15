@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         calculationYear(20010);
         installationOS(2030);
-
+        deliveryTime();
+        deliveryTime2(99);
 
     }
 
@@ -25,7 +26,7 @@ public class Main {
         System.out.println("введите тип вашей OS, если IOS то введите 0 , а если Android введите 1");
         Scanner console = new Scanner(System.in);
         int os = console.nextInt();
-        //  System.out.println(os);
+        ;
         return os;
     }
 
@@ -60,10 +61,66 @@ public class Main {
                 }
             }
         }
+        System.out.println("Задача №3");
+    }
+
+    public static int deliveryDistance() {
+        System.out.println(" Введите ,плиз, дистанцию до адреса доставки");
+        Scanner inputDistance = new Scanner(System.in);
+        int deliveryDistance = inputDistance.nextInt();
+        return deliveryDistance;
+    }
 
 
+    public static void deliveryTime() {
+        int a = deliveryDistance();
+        if (a <= 100) {
+            if (a <= 20) {
+                System.out.println(" Доставка 1 сутки");
+            } else if (a <= 60) {
+                System.out.println(" Доставка 2  суток");
+            } else if (a <= 100) {
+                System.out.println(" Доставкиа 3 суток");
+            }
+
+        } else {
+            System.out.println(" Доставки свыше 100 км нет");
         }
     }
+
+    public static void deliveryTime2(int deliveryDistance) {
+        int time = 1;
+
+        if (deliveryDistance >= 20) {
+            time++;
+        }
+        if (deliveryDistance >= 60) {
+            time++;
+        }
+        if (deliveryDistance > 100) {
+            System.out.println(" Нет доставки");
+        } else {
+            System.out.println(" Доставка " + time + " Дней");
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
