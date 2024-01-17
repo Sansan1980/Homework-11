@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        calculationYear(2010);
-        installationOS(2003);
-        deliveryTime();
-        deliveryTime2(99);
+        calculateYear(2010);
+        installOS(2003);
+        calculateDeliveryTime();
+        calculateDeliveryTime(99);
     }
-    public static void calculationYear(int year) {
+    public static void calculateYear(int year) {
         System.out.println("Задача №1");
         int countingStart = 1584;
         if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -28,13 +28,13 @@ public class Main {
         return os;
     }
 
-    public static void installationOS(int clientDeviceYear) {
+    public static void installOS(int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
         System.out.println("Год выпуска Вашего телефона " + clientDeviceYear + " года ");
         System.out.println("У вас версия OS " + currentYear + " года");
         label:
         for (int os = definitionOS(); true; os = definitionOS()) {
-            if (clientDeviceYear >= currentYear) {
+            if (clientDeviceYear < currentYear) {
                 switch (os) {
                     case 1:
                         System.out.println("Установите облегченную версию приложения для Android по ссылке");
@@ -69,14 +69,14 @@ public class Main {
     }
 
 
-    public static void deliveryTime() {
+    public static void calculateDeliveryTime() {
         int a = deliveryDistance();
         if (a <= 100) {
             if (a <= 20) {
                 System.out.println(" Доставка 1 сутки");
             } else if (a <= 60) {
                 System.out.println(" Доставка 2  суток");
-            } else if (a > 60) {
+            } else  {
                 System.out.println(" Доставка 3 суток");
             }
 
@@ -85,7 +85,7 @@ public class Main {
         }
     }
 
-    public static void deliveryTime2(int deliveryDistance) {
+    public static void calculateDeliveryTime(int deliveryDistance) {
         int time = 1;
 
         if (deliveryDistance >= 20) {
