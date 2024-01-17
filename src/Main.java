@@ -11,7 +11,7 @@ public class Main {
     }
 
     public static void calculateYear(int year) {
-        System.out.println("Задача №1");
+        System.out.println("Задача 1");
         int countingStart = 1584;
         if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.print(year + "год — високосный год");
