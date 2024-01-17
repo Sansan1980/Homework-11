@@ -2,14 +2,14 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 
-
 public class Main {
     public static void main(String[] args) {
         calculateYear(2010);
-        installOS(2003);
+        installOS(2024);
         calculateDeliveryTime();
         calculateDeliveryTime(99);
     }
+
     public static void calculateYear(int year) {
         System.out.println("Задача №1");
         int countingStart = 1584;
@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Год выпуска Вашего телефона " + clientDeviceYear + " года ");
         System.out.println("У вас версия OS " + currentYear + " года");
         label:
-        for (int os = definitionOS(); true; os = definitionOS()) {
+        for (int os = definitionOS(); true ; os = definitionOS()) {
             if (clientDeviceYear < currentYear) {
                 switch (os) {
                     case 1:
@@ -57,6 +57,8 @@ public class Main {
                         System.out.println(" OS Нераспознана!!! Введены некоректные значения!!!");
                 }
             }
+
+
         }
     }
 
@@ -76,7 +78,7 @@ public class Main {
                 System.out.println(" Доставка 1 сутки");
             } else if (a <= 60) {
                 System.out.println(" Доставка 2  суток");
-            } else  {
+            } else {
                 System.out.println(" Доставка 3 суток");
             }
 
